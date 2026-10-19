@@ -1,4 +1,5 @@
-import {Link, Outlet} from 'react-router-dom'
+import {NavLink, Outlet} from 'react-router-dom'
+import Breadcrumb from './Breadcrumb'
 
 function Layout(){
     return(
@@ -6,13 +7,15 @@ function Layout(){
             <header>
                 <h1>User</h1>
                 <nav>
-                    <Link to="/">Utama</Link>
+                    <NavLink to="/">Utama</NavLink>
                     {" | "}
-                    <Link to="/users">List User</Link>
+                    <NavLink to="/users">List User</NavLink>
                 </nav>
             </header>
             <br />
             <main>
+                <Breadcrumb/>
+                <br />
                 <Outlet/>
             </main>
         </div>
